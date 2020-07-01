@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pronunciation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">SAY IT</h5>
+    <nav class="my-2 my-md-0 mr-md-3 header_navigation">
+        <a class="p-2 text-dark" href="https://translate.google.ru/?hl=ru&tab=rT" target="_blank" rel="noopener">Google translate</a>
+        <a class="p-2 text-dark" href="https://context.reverso.net/%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4/" target="_blank" rel="noopener">ReversoContext</a>
+        <a class="p-2 text-dark" href="https://www.multitran.com/m.exe?l1=1&l2=2" target="_blank" rel="noopener">Multitran</a>
+        <a class="p-2 text-dark" href="https://www.urbandictionary.com/" target="_blank" rel="noopener">Urbandictionary</a>
+    </nav>
+</div>
+
+<div class="container">
+    <div id="widget"></div>
+</div>
+
+
+<script>
+
+    var tag = document.createElement('script');
+
+    tag.src = "https://youglish.com/public/emb/widget.js";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var widget;
+    function onYouglishAPIReady(){
+        widget = new YG.Widget("widget", {
+            width: 760,
+            components:731,
+            autoStart: 0,
+            markerColor: 'black',
+        });
+
+        widget.fetch("Say it","english");
+    }
+
+</script>
+
+</body>
+</html>

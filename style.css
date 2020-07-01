@@ -1,0 +1,7 @@
+@media (max-width: 767px) {
+    .header_navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
